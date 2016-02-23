@@ -1,0 +1,374 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Allied Fitness</title>
+
+        <script src="../static/revolution/js/source/jquery.js" language="javascript" type="text/javascript"></script>
+
+        <!-- RS5.0 Main Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="../static/revolution/css/settings.css">
+         
+        <!-- RS5.0 Layers and Navigation Styles -->
+        <link rel="stylesheet" type="text/css" href="../static/revolution/css/layers.css">
+        <link rel="stylesheet" type="text/css" href="../static/revolution/css/navigation.css">    
+         
+        <!-- RS5.0 Core JS Files -->
+        <script type="text/javascript" src="../static/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+        <script type="text/javascript" src="../static/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+
+        <!-- Google fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Raleway:300,500,800|Old+Standard+TT" rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Raleway:300,500,800" rel='stylesheet' type='text/css'>
+
+        <!-- font awesome -->
+        <link href="{% static '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' %}" rel="stylesheet">
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" />
+
+        <!-- uniform -->
+        <link type="text/css" rel="stylesheet" href="{% static 'assets/uniform/css/uniform.default.min.css' %}" />
+
+        <!-- animate.css -->
+        <link rel="stylesheet" href="{% static 'assets/wow/animate.css' %}" />
+
+
+        <!-- gallery -->
+        <link rel="stylesheet" href="{% static 'assets/gallery/blueimp-gallery.min.css' %}">
+
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+        <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+
+        <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+
+    </head>
+
+        <body id="home">
+
+
+            <!-- top 
+              <form class="navbar-form navbar-left newsletter" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Enter Your Email Id Here">
+                    </div>
+                    <button type="submit" class="btn btn-inverse">Subscribe</button>
+                </form>
+             top -->
+
+            <!-- header -->
+            <nav class="navbar  navbar-default" role="navigation">
+              <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.php"><img src="{% static 'images/logo.png' %}"  alt="holiday crown"></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                  
+                  <ul class="nav navbar-nav">        
+                    <li><a href="/home_view/">Home </a></li>
+                    <li><a href="/about_view/">About Us</a></li>        
+                    <li><a href="/client_view/">Partners</a></li>
+                    <!-- These tabs will probably be used later on. -->
+                    <!--<li><a href="gallery.php">Success Stories</a></li>--> 
+                    <!--<li><a href="/contact_view/">Contact</a></li>-->
+                  </ul>
+                </div><!-- navbar-collapse -->
+              </div><!-- container-fluid -->
+            </nav>
+            <!-- header -->
+            <?php include 'header.php';?>
+
+            <!-- START REVOLUTION SLIDER 5.0 -->
+            <!--<div class="rev_slider_wrapper">
+             <div id="slider1" class="rev_slider"  data-version="5.0">
+              <ul>      
+               <li data-transition="fade">-->          
+                 <!-- MAIN IMAGE -->
+                 <!--<img src="{% static 'images/photos/Yoga_Pic.png' %}"  alt=""  width="1500" height="900">-->                          
+                 <!-- LAYER NR. 1 -->
+                 <!--<div class="tp-caption News-Title"                             
+                    data-x="left" data-hoffset="80" 
+                    data-y="top" data-voffset="450"                             
+                    data-whitespace="normal"
+                    data-transform_idle="o:1;"          
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0"                             
+                    data-start="500">
+                 </div>
+               </li>
+             
+               <li data-transition="fade">-->          
+                 <!-- MAIN IMAGE -->
+                 <!--<img src="{% static 'images/photos/Crossfit_Pic.png' %}"  alt=""  width="1500" height="900">-->                          
+                 <!-- LAYER NR. 1 -->
+                 <!--<div class="tp-caption News-Title"                             
+                    data-x="left" data-hoffset="80" 
+                    data-y="top" data-voffset="450"                             
+                    data-whitespace="normal"
+                    data-transform_idle="o:1;"          
+                    data-transform_in="o:0" 
+                    data-transform_out="o:0"                             
+                    data-start="500">
+                 </div>
+               </li>
+              </ul>             
+             </div>-->
+             <!-- END REVOLUTION SLIDER -->
+            <!--</div>-->
+            <!-- END OF SLIDER WRAPPER -->
+
+            <!-- old banner -->
+            <!--<div class="banner">         
+                <img src="{% static 'images/photos/banner.jpg' %}"  class="img-responsive" alt="slide">
+                <div class="welcome-message">
+                    <div class="wrap-info">
+                        <div class="information">
+                            <h1  class="animated fadeInDown">Allied Fitness</h1>
+                            <p class="animated fadeInUp">One Membership.  Unlimited Gyms & Studios.</p>                
+                        </div>
+                        <a href="#information" class="arrow-nav scroll wowload fadeInDownBig"><i class="fa fa-angle-down"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- old banner-->
+
+
+            <!-- reservation-information -->
+            <!--<div id="information" class="spacer reserve-info ">
+              <div class="container">
+                <div class="row">
+
+                  <!-- This will be the div container 
+                       for when we implement an intro
+                       video.
+
+                  <div class="col-sm-7 col-md-8">
+                      <div class="embed-responsive embed-responsive-16by9 wowload fadeInLeft"><iframe  class="embed-responsive-item" src="//player.vimeo.com/video/55057393?title=0" width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                  </div>-->
+            <!--
+            <div class="col-sm-5 col-md-4">
+            <h3>Join Up Now!</h3>
+                <form role="form" class="wowload fadeInRight">
+                    <div class="form-group">
+                        <input type="text" class="form-control"  placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control"  placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="Phone" class="form-control"  placeholder="Phone">
+                    </div>        
+                    <div class="form-group">
+                        <div class="row">
+                        <div class="col-xs-6">
+                        <select class="form-control">
+                          <option>No. of Memberships</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        </div>        
+                        <div class="col-xs-6">
+                        <select class="form-control">
+                          <option>Package Type</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        </div></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                        <div class="col-xs-4">
+                          <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                            <option>Date</option>
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">Mar (03)</option>
+                            <option value="04">Apr (04)</option>
+                            <option value="05">May (05)</option>
+                            <option value="06">June (06)</option>
+                            <option value="07">July (07)</option>
+                            <option value="08">Aug (08)</option>
+                            <option value="09">Sep (09)</option>
+                            <option value="10">Oct (10)</option>
+                            <option value="11">Nov (11)</option>
+                            <option value="12">Dec (12)</option>
+                          </select>
+                        </div>
+                        <div class="col-xs-4">
+                          <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                            <option>Month</option>
+                            <option value="01">Jan (01)</option>
+                            <option value="02">Feb (02)</option>
+                            <option value="03">Mar (03)</option>
+                            <option value="04">Apr (04)</option>
+                            <option value="05">May (05)</option>
+                            <option value="06">June (06)</option>
+                            <option value="07">July (07)</option>
+                            <option value="08">Aug (08)</option>
+                            <option value="09">Sep (09)</option>
+                            <option value="10">Oct (10)</option>
+                            <option value="11">Nov (11)</option>
+                            <option value="12">Dec (12)</option>
+                          </select>
+                        </div>
+                        <div class="col-xs-4">
+                          <select class="form-control" name="expiry-year">
+                            <option value="13">2013</option>
+                            <option value="14">2014</option>
+                            <option value="15">2015</option>
+                            <option value="16">2016</option>
+                            <option value="17">2017</option>
+                            <option value="18">2018</option>
+                            <option value="19">2019</option>
+                            <option value="20">2020</option>
+                            <option value="21">2021</option>
+                            <option value="22">2022</option>
+                            <option value="23">2023</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="Message" rows="4"></textarea>
+                    </div>
+                    <button class="btn btn-default">Submit</button>
+                </form>    
+            </div>
+            </div>  
+            </div>
+            </div>
+            -->
+            <!-- reservation-information -->
+
+            <!-- homepage allied fitness information-->
+            <div class="row">
+              <!-- Wait to include the "Contact Us" form.-->
+              <div class="col-md-12 wowload fadeInUp"><div class="rooms"><img src="{% static 'images/photos/Yoga_Pic.png' %}" class="img-responsive"><div class="text-center info"><p>  </p><a href="/about_view/" class="btn btn-default">About Us</a></div></div></div>
+              <div class="col-md-12 wowload fadeInUp"><div class="rooms"><img src="{% static 'images/photos/Boxing_Pic.png' %}" class="img-responsive"><div class="text-center info"><p>  </p><a href="/client_view/" class="btn btn-default">Our Partners</a></div></div></div>
+              <div class="col-md-12 wowload fadeInUp"><div class="rooms"><img src="{% static 'images/photos/Crossfit_Pic.png' %}" class="img-responsive"><div class="text-center info"><p>  </p><a href="" class="btn btn-default">Coming Soon</a></div></div></div>
+            </div>
+            <!-- services -->
+            <!--
+            <div class="spacer services wowload fadeInUp">
+                <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                    -->
+                        <!-- RoomCarousel -->
+                        <!--
+                        <div id="RoomCarousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                            <div class="item active"><img src="{% static 'images/photos/8.jpg' %}" class="img-responsive" alt="slide"></div>                
+                            <div class="item  height-full"><img src="images/photos/9.jpg"  class="img-responsive" alt="slide"></div>
+                            <div class="item  height-full"><img src="images/photos/10.jpg"  class="img-responsive" alt="slide"></div>
+                            </div>
+                            -->
+                            <!-- Controls -->
+                            <!--
+                            <a class="left carousel-control" href="#RoomCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                            <a class="right carousel-control" href="#RoomCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                        -->
+                        <!-- RoomCarousel-->
+                        <!--
+                        <div class="caption">Rooms<a href="rooms-tariff.php" class="pull-right"><i class="fa fa-edit"></i></a></div>
+                    </div>
+
+
+                    <div class="col-sm-4">
+                      -->
+                        <!-- RoomCarousel -->
+                        <!-- 
+                        <div id="TourCarousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                            <div class="item active"><img src="{% static 'images/photos/6.jpg' %}" class="img-responsive" alt="slide"></div>
+                            <div class="item  height-full"><img src="{% static 'images/photos/3.jpg' %}"  class="img-responsive" alt="slide"></div>
+                            <div class="item  height-full"><img src="{% static 'images/photos/4.jpg' %}"  class="img-responsive" alt="slide"></div>
+                            </div>
+                            -->
+                            <!-- Controls -->
+                            <!--
+                            <a class="left carousel-control" href="#TourCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                            <a class="right carousel-control" href="#TourCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                        -->
+                        <!-- RoomCarousel-->
+                        <!--
+                        <div class="caption">Tour Packages<a href="{% static 'gallery.php' %}" class="pull-right"><i class="fa fa-edit"></i></a></div>
+                    </div>
+
+
+                    <div class="col-sm-4">
+                      -->
+                        <!-- RoomCarousel -->
+                        <!--
+                        <div id="FoodCarousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                            <div class="item active"><img src="{% static 'images/photos/1.jpg' %}" class="img-responsive" alt="slide"></div>
+                            <div class="item  height-full"><img src="{% static 'images/photos/2.jpg' %}"  class="img-responsive" alt="slide"></div>
+                            <div class="item  height-full"><img src="{% static 'images/photos/5.jpg' %}"  class="img-responsive" alt="slide"></div>
+                            </div>
+                            -->
+                            <!-- Controls -->
+                            <!--
+                            <a class="left carousel-control" href="#FoodCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                            <a class="right carousel-control" href="#FoodCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                        -->
+                        <!-- RoomCarousel-->
+                        <!--
+                        <div class="caption">Food and Drinks<a href="{% static 'gallery.php' %}" class="pull-right"><i class="fa fa-edit"></i></a></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            -->
+            <!-- services -->
+
+                    <div class="container">
+                    <h2 class="text-center"><a href="map/">Find Your Gym!</a></h2>
+                    </div>
+        </body>
+
+
+
+            <?php include 'footer.php';?>
+
+            <footer>
+            
+                <script>    
+                jQuery(document).ready(function() {     
+                   jQuery("#slider1").revolution({
+                      sliderType:"standard",
+                      sliderLayout:"auto",
+                      delay:9000,
+                      navigation: {
+                          arrows:{enable:true}              
+                      },            
+                      gridwidth:1230,
+                      gridheight:720        
+                    });     
+                }); 
+                </script>
+
+            </footer>
+
+            <?php include 'footer.php';?>

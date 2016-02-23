@@ -1,0 +1,164 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Allied Fitness</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+function initMap() { 
+  var mapCenter = {lat: 38.873858, lng: -77.153646};
+  var myThrivePilates = {lat: 38.840606, lng: -77.089128};
+  var titleBoxingClub = {lat: 38.885984, lng: -77.165261};
+  var fiveRingsFitness = {lat: 38.880807, lng: -77.173997};
+  var blueNectarYoga = {lat: 38.886798, lng: -77.178676};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: mapCenter
+  });
+
+  // My Thrive Pilates Pin Code
+
+  // var ThriveString = '<div id="content">'+
+  //     '<div id="siteNotice">'+
+  //     '</div>'+
+  //     '<h1 id="firstHeading" class="firstHeading">My Thrive Pilates <a href="http://mythrivepilates.com/"> Website</a></h1>' +
+  //     '<h4 id="secondHeading" class="secondHeading">444 W Broad St Ste B Falls Church, VA 22046</h4>' +
+  //     '<div id="bodyContent">'+
+  //     '<p><b>Yelp.com: </b> What a fun place! Everyone here really contributes to a postiive and' +
+  //     ' energetic environment.  The instructors are top notch!</p>'+
+  //     '</div>'+
+  //     '</div>';
+
+  // var Thrivewindow = new google.maps.InfoWindow({
+  //   content: ThriveString
+  // });
+
+  var marker = new google.maps.Marker({
+    position: myThrivePilates,
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: {lat: 38.840606, lng: -77.089128},
+    title: 'My Thrive Pilates'
+  });
+  marker.addListener('click', function(){
+    Thrivewindow.open(map, marker);
+  });
+
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
+  // var titleBoxString = '<div id="content">'+
+  //     '<div id="siteNotice">'+
+  //     '</div>'+
+  //     '<h1 id="firstHeading" class="firstHeading">Title Boxing Club | <a href="http://fallschurch.titleboxingclub.com/"> Website</a></h1>' +
+  //     '<h4 id="secondHeading" class="secondHeading">450 NORTH WASHINGTON STREET FALLS CHURCH, VA 22046</h4>' +
+  //     '<div id="bodyContent">' +
+  //     '<p><b>Twitter.com :</b> Nothing can stop you, if you refuse to accept less' +
+  //     ' than your goal!</p>' +
+  //     '</div>' +
+  //     '</div>';
+
+  //   var Titlewindow = new google.maps.InfoWindow({
+  //   content: titleBoxString
+  // });
+
+  var marker = new google.maps.Marker({
+    position: titleBoxingClub,
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: {lat: 38.885984, lng: -77.165261},
+    title: 'Title Boxing Club'
+  });
+  marker.addListener('click', function(){
+    Titlewindow.open(map, marker);
+  })
+
+  // var fiveRingsString = '<div id="content">'+
+  //   '<div id="siteNotice">'+
+  //   '</div>'+
+  //   '<h1 id="firstHeading" class="firstHeading">Five Rings Fitness | <a href="http://5ringsfitness.us/"> Website</a></h1>'+
+  //   '<h4 id="secondHeading" class="secondHeading">336-A S Washington St Falls Church, VA 22046</h4>' +
+  //   '<div id="bodyContent">'+
+  //   '<p><b>Yelp.com: </b> I can\'t find anything not to like about 5 Rings.' +
+  //   ' I\'m motivated each time I leave and can\'t wait to return.</p>'+
+  //   '</div>'+
+  //   '</div>';
+
+  //   var fiveRingswindow = new google.maps.InfoWindow({
+  //   content: fiveRingsString
+  // });
+
+  var marker = new google.maps.Marker({
+    position: fiveRingsFitness,
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: {lat: 38.880807, lng: -77.173997},
+    title: 'Five Rings Fitness'
+  });
+  marker.addListener('click', function(){
+    fiveRingswindow.open(map, marker);
+  })
+
+    // Blue Nectar Yoga Pin Code
+
+    // var blueNectarString = '<div id="content">'+
+    // '<div id="siteNotice">'+
+    // '</div>'+
+    // '<h1 id="firstHeading" class="firstHeading">Blue Nectar Yoga   <a href="http://bluenectaryoga.com/"> Website</a></h1>'+
+    // '<h4 id="secondHeading" class="secondHeading">513 W Broad St Ste 110 C Falls Church, VA 22046</h4>' +
+    // '<div id="bodyContent">'+
+    // '<p><b>Yelp.com: </b> I started taking classes here as a very very beginner.' +
+    // ' The space is nice and relaxing and I really enjoy that it is a varied crowd.</p>'+
+    // '</div>'+
+    // '</div>';
+
+    // var blueNectarwindow = new google.maps.InfoWindow({
+    //   content: blueNectarString
+    // });
+
+  var marker = new google.maps.Marker({
+    position: blueNectarYoga,
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: {lat: 38.886798, lng: -77.178676},
+    title: 'Blue Nectar Yoga'
+  });
+  marker.addListener('click', function(){
+    blueNectarwindow.open(map, marker);
+  })
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxsWoZcAT2EOja_QcoxIe6DANZORl0eRs&signed_in=true&callback=initMap"></script>
+  </body>
+</html>
